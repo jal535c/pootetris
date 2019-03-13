@@ -54,10 +54,20 @@ void Pieza::pieza_nueva() {
 	orig.x = 5; 
 	orig.y = 3;
 
-	micolor = 1 + rand()%6;
+	//micolor = 1 + rand()%6;
 
 	//pieza al azar
 	int r = rand() %7;		//elijo una fila de mi matriz perifs
+	switch (r) {       //cada pieza tiene su color fijo
+   		case 0: micolor = 3; break;   
+   		case 1: micolor = 6; break;
+   		case 2: micolor = 8; break;
+   		case 3: micolor = 5; break;
+   		case 4: micolor = 4; break;
+   		case 5: micolor = 2; break;
+   		case 6: micolor = 1; break;
+  	}
+
 	for (int i=0; i<3; i++) {
 		perif[i] = perifs[r][i];
 	}
